@@ -38,7 +38,7 @@ skyconv_SOURCES := skyconv.c n64graphics.c utils.c
 LIBAUDIOFILE := audiofile/libaudiofile.a
 
 $(LIBAUDIOFILE):
-	@$(MAKE) -C audiofile
+	@CC=$(CC) CXX=$(CXX) $(MAKE) -C audiofile
 
 all: $(LIBAUDIOFILE) $(PROGRAMS) $(CXX_PROGRAMS)
 
